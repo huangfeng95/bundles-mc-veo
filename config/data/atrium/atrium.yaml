@@ -1,0 +1,50 @@
+---
+ data_loader:
+  motion_compensation: True
+  num_events: 20000
+  overlap: 0.0
+  new_overlap: 0.0
+
+ tracker:
+  accelerate: True
+  percent_points: 20.0 #percentage of image points to track
+  type: 'ceres'
+  bootstrapping: EIGHT_POINTS #MiDAS (only for the midas version no open-source)
+  loss_function:
+    type: "Huber"
+    param: [0.1]
+  options:
+    solver_type: 'DENSE_QR'
+    num_threads: 4
+    max_num_iterations: [100]
+    function_tolerance: 1.0e-06
+    minimizer_progress_to_stdout: False
+
+ mapping:
+    min_depth: 1.0
+    max_depth: 33.0
+    convergence_sigma2_thresh: 100
+    z_dim: 100
+    median_pool:
+      active: True
+      kernel_size: 3
+    sor:
+      active: True
+      nb_points: 15
+      radius: 1.0
+
+ bundles:
+  type: 'ceres'
+  percent_points: 50.0 #percentage of all points in windows to use
+  percent_marginalize_vis: 30.0  #percent of visual point to seletc the kf to marginalize
+  window_size: 7 #sliding window 
+  loss_function:
+    type: "Huber"
+    param: [1.0]
+  options:
+    solver_type: 'SPARSE_SCHUR'
+    num_threads: 12
+    max_num_iterations: 100
+    function_tolerance: 1.0e-08
+    minimizer_progress_to_stdout: False
+

@@ -1,0 +1,19 @@
+<package>
+  <description brief="Rock bundles: configuration, calibration files and executing scripts for Event and Frame based Visual Odometry (MC-VEO)">
+  Rock bundles: configuration, calibration files and executing scripts for Event and Frame based Visual Odometry (MC-VEO)
+  </description>
+  <author>2010195@tongji.edu.cn</author>
+  <license></license>
+  <url>http://</url>
+  <logo>http://</logo>
+
+  <depend package="bundles/rock" />
+  <!--
+   To add any dependencies use the depend tag
+  <depend package="dummy-dependency-0" />
+	...
+  <depend package="dummy-dependency-n-1" />
+  <depend package="dummy-dependency-n" />
+  -->
+  <depend package="bundles/rock" />
+</package>

@@ -1,0 +1,33 @@
+%YAML:1.0
+# obtained with https://github.com/gaowenliang/imu_utils
+---
+type: IMU
+name: mpu-9250
+Gyr:
+   unit: " rad/s"
+   avg-axis:
+      gyr_n: 2.9209663924250162e-03
+      gyr_w: 3.2161726401739933e-05
+   x-axis:
+      gyr_n: 2.6844454416134777e-03
+      gyr_w: 3.3120819391271496e-05
+   y-axis:
+      gyr_n: 2.8833626058056535e-03
+      gyr_w: 3.9937046462041585e-05
+   z-axis:
+      gyr_n: 3.1950911298559161e-03
+      gyr_w: 2.3427313351906727e-05
+Acc:
+   unit: " m/s^2"
+   avg-axis:
+      acc_n: 4.4921729698654813e-03
+      acc_w: 7.7965111058444060e-05
+   x-axis:
+      acc_n: 3.7991456934458609e-03
+      acc_w: 7.4747387083339931e-05
+   y-axis:
+      acc_n: 3.7725235227085343e-03
+      acc_w: 7.0990951476978921e-05
+   z-axis:
+      acc_n: 5.9048496934420479e-03
+      acc_w: 8.8156994615013316e-05

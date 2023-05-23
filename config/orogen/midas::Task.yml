@@ -1,0 +1,9 @@
+--- name:default
+# maximum latency, in seconds, of the stream aligner. The aligner will start dropping samples if the difference between the last output and last input is greater than this
+aggregator_max_latency: 0.5
+# minimum system time in s between two status readings
+stream_aligner_status_period: 1.0
+# minimum time, in s, between two sequential samples arrive on frame
+frame_period: 0.0333
+model_filename: '/home/javi/rock/dev/install/models/midas_v21.pt'
+

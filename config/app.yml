@@ -1,0 +1,20 @@
+# Bundle-specific configuration
+bundle:
+    # List of bundles we depend on
+    dependencies:
+        - rock
+
+
+engine:
+# Logging configuration
+log:
+    # Where log files go in my external hardisk
+    dir: ./tmp
+
+levels:
+    syskit/network_generation: DEBUG:syskit-netgen.txt
+
+discovery:
+
+droby:
+
