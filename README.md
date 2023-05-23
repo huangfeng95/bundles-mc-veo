@@ -1,4 +1,4 @@
-# Event and Frame based Visual Odometry - Bundles
+# Motion Compensated Visual-Event Odometry - Bundles
 
 This bundles is compatible with [Rock roby](https://github.com/rock-core/tools-roby) plan manager.
 If you don't know about Rock roby you can just ignore it.
