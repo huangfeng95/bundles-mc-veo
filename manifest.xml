@@ -1,6 +1,6 @@
 <package>
-  <description brief="Rock bundles: configuration, calibration files and executing scripts for Event and Frame based Visual Odometry (MC-VEO)">
-  Rock bundles: configuration, calibration files and executing scripts for Event and Frame based Visual Odometry (MC-VEO)
+  <description brief="Rock bundles: configuration, calibration files and executing scripts for Motion Compensated Visual-Event Odometry (MC-VEO)">
+  Rock bundles: configuration, calibration files and executing scripts for Motion Compensated Visual-Event Odometry (MC-VEO)
   </description>
   <author>2010195@tongji.edu.cn</author>
   <license></license>
