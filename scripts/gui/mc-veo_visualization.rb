@@ -7,15 +7,15 @@ require 'vizkit'
 require 'optparse'
 
 options = {}
-options[:taskname] = 'mc-veo'
+options[:taskname] = 'mc_veo'
 options[:hostname] = nil
 options[:logfile] = nil
 
 op = OptionParser.new do |opt|
     opt.banner = <<-EOD
-    mc-veo_visualization [options]
+    mc_veo_visualization [options]
     EOD
-    opt.on '--task=TASKNAME', String, 'OROCOS Task name (mc-veo by default)' do |taskname|
+    opt.on '--task=TASKNAME', String, 'OROCOS Task name (mc_veo by default)' do |taskname|
         options[:taskname] = taskname
     end
 
@@ -108,20 +108,20 @@ of_frame.windowTitle = "Optical Flow"
 kfs_array = []
 
 ## mc-veo in Asynchronous mode
-mc-veo = Orocos::Async.proxy options[:taskname]
+mc_veo = Orocos::Async.proxy options[:taskname]
 
-mc-veo.on_reachable do
+mc_veo.on_reachable do
 
     # Keyframe Point cloud
     local_map.setPointSize(3.0)
-    Vizkit.display mc-veo.port('local_map'), :widget =>local_map
+    Vizkit.display mc_veo.port('local_map'), :widget =>local_map
 
     # Global Point cloud
     global_map.setPointSize(3.0)
-    Vizkit.display mc-veo.port('global_map'), :widget =>global_map
+    Vizkit.display mc_veo.port('global_map'), :widget =>global_map
 
     # KFs pose
-    mc-veo.port('pose_w_kfs').on_data do |array|
+    mc_veo.port('pose_w_kfs').on_data do |array|
         # Clean previous plugins
         kfs_array.each do |p|
             Vizkit.vizkit3d_widget.removePlugin(p)
@@ -147,14 +147,14 @@ mc-veo.on_reachable do
     end
 
     # KF trajectory
-    mc-veo.port('pose_w_kf').on_data do |t_w_kf,_|
+    mc_veo.port('pose_w_kf').on_data do |t_w_kf,_|
         Vizkit.vizkit3d_widget.setTransformation("world","kf",
                     Qt::Vector3D.new(t_w_kf.position[0], t_w_kf.position[1], t_w_kf.position[2]),
                     Qt::Quaternion.new(Qt::Vector4D.new(t_w_kf.orientation.x, t_w_kf.orientation.y, t_w_kf.orientation.z, t_w_kf.orientation.w)))
     end
 
     # EF trajectory
-    mc-veo.port('pose_w_ef').on_data do |t_w_ef,_|
+    mc_veo.port('pose_w_ef').on_data do |t_w_ef,_|
         trajectory.updateTrajectory(t_w_ef.position)
         Vizkit.vizkit3d_widget.setTransformation("world","ef",
                     Qt::Vector3D.new(t_w_ef.position[0], t_w_ef.position[1], t_w_ef.position[2]),
@@ -162,30 +162,30 @@ mc-veo.on_reachable do
     end
 
     # inv depth frame
-    Vizkit.display mc-veo.port("inv_depth_frame"), :widget => inv_depth_img
+    Vizkit.display mc_veo.port("inv_depth_frame"), :widget => inv_depth_img
 
     # event frame
-    Vizkit.display mc-veo.port("event_frame"), :widget => event_frame
+    Vizkit.display mc_veo.port("event_frame"), :widget => event_frame
 
     # brightness model frame
-    Vizkit.display mc-veo.port("model_frame"), :widget => model_frame
+    Vizkit.display mc_veo.port("model_frame"), :widget => model_frame
 
     # frame of optmization residuals
-    Vizkit.display mc-veo.port("residuals_frame"), :widget => residuals_img
+    Vizkit.display mc_veo.port("residuals_frame"), :widget => residuals_img
 
     # keyframes frame
-    Vizkit.display mc-veo.port("keyframes_frame"), :widget => keyframes_frame
+    Vizkit.display mc_veo.port("keyframes_frame"), :widget => keyframes_frame
 
     # optical flow frame
-    Vizkit.display mc-veo.port("of_frame"), :widget => of_frame
+    Vizkit.display mc_veo.port("of_frame"), :widget => of_frame
 
 end
 
 # Enable the GUI when the task is reachable
-mc-veo.on_reachable {Vizkit.vizkit3d_widget.setEnabled(true)} if options[:logfile].nil?
+mc_veo.on_reachable {Vizkit.vizkit3d_widget.setEnabled(true)} if options[:logfile].nil?
 
 # Disable the GUI until the task is reachable
-mc-veo.on_unreachable {Vizkit.vizkit3d_widget.setEnabled(false)} if options[:logfile].nil?
+mc_veo.on_unreachable {Vizkit.vizkit3d_widget.setEnabled(false)} if options[:logfile].nil?
 
 Vizkit.control log_replay unless options[:logfile].nil?
 Vizkit.exec
