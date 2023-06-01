@@ -84,9 +84,6 @@ Bundles.run 'mc_veo::Task' => 'mc_veo', :gdb => false, :output => '%m-%p.txt', :
 
     #puts log_replay.methods.sort (see all methods availables)
     # Automatic log replay
-    # || (Time.at(1646227781,700000)-log_replay.time)<=0 # 11_all_characters的截断时间1646227781,700000，快速运动
-    # || (Time.at(1645101691)-log_replay.time)<=0  # rocket_earth_light的截断时间1645101691
-    # || (Time.at(1646307804)-log_replay.time)<=0 # rpg_building的截断时间1646307804进入楼道，关键帧固定在墙角
     while true
         if mc_veo.state == :RUNNING || mc_veo.state == :OPTIMIZING
             log_replay.step
