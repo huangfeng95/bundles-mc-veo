@@ -1,8 +1,8 @@
 # SIMULATION
 --- name:atrium
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/atrium/atrium.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/atrium/atrium.yaml'
 # Simple calibration since this is a simulated pinhole camera model
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/atrium/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/atrium/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.001
@@ -19,9 +19,9 @@ stream_aligner_status_period: 0.5
 
 # STEREO DAVIS DATASET ECCV18 (Used in the paper)
 --- name:bin
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/bin/bin.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/bin/bin.yaml'
 # Calibration parameters for the DAVIS took from https://rpg.ifi.uzh.ch/ECCV18_stereo_davis.html
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/bin/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/bin/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -37,9 +37,9 @@ aggregator_max_latency: 0.05
 stream_aligner_status_period: 0.5
 
 --- name:boxes
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/boxes/boxes.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/boxes/boxes.yaml'
 # Calibration parameters for the DAVIS took from https://rpg.ifi.uzh.ch/ECCV18_stereo_davis.html
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/boxes/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/boxes/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -55,9 +55,9 @@ aggregator_max_latency: 0.1
 stream_aligner_status_period: 0.5
 
 --- name:desk
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/desk/desk.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/desk/desk.yaml'
 # Calibration parameters for the DAVIS took from https://rpg.ifi.uzh.ch/ECCV18_stereo_davis.html
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/desk/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/desk/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -73,9 +73,9 @@ aggregator_max_latency: 0.05
 stream_aligner_status_period: 0.5
 
 --- name:monitor
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/monitor/monitor.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/monitor/monitor.yaml'
 # Calibration parameters for the DAVIS took from https://rpg.ifi.uzh.ch/ECCV18_stereo_davis.html
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/stereo_davis/monitor/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/stereo_davis/monitor/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -94,9 +94,9 @@ stream_aligner_status_period: 0.5
 --- name:snoopy
 # You can download this sequence by running:
 # wget https://download.ifi.uzh.ch/rpg/eds/extra_sequences/snoopy/snoopy.log
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/extra_sequences/snoopy/snoopy.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/extra_sequences/snoopy/snoopy.yaml'
 # Remember this file has to be a symbolic link to 01_calib/camchain-mediajaviJAVISdatasetshwdscalibratione2kalibr.yaml in bundles/mc-veo
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -113,9 +113,9 @@ stream_aligner_status_period: 0.5
 
 # EDS RELEASE DATASETS (03_CALIB)
 --- name:11_all_characters
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/eds_dataset/11_all_characters/11_all_characters.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/eds_dataset/11_all_characters/11_all_characters.yaml'
 # Remember that this file has to be a symblic link to 03_calib/camchain-mediajaviJAVISdatasetshwdscalibratione2kalibr.yaml in bundles/mc-veo
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -131,9 +131,9 @@ aggregator_max_latency: 0.1
 stream_aligner_status_period: 0.5
 
 --- name:rocket_earth_light
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/eds_dataset/rocket_earth_light/rocket_earth_light.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/eds_dataset/rocket_earth_light/rocket_earth_light.yaml'
 # Remember that this file has to be a symblic link to 03_calib/camchain-mediajaviJAVISdatasetshwdscalibratione2kalibr.yaml in bundles/mc-veo
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -149,9 +149,9 @@ aggregator_max_latency: 0.1
 stream_aligner_status_period: 0.5
 
 --- name:rpg_building
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/eds_dataset/rpg_building/rpg_building.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/eds_dataset/rpg_building/rpg_building.yaml'
 # Remember that this file has to be a symblic link to 03_calib/camchain-mediajaviJAVISdatasetshwdscalibratione2kalibr.yaml in bundles/mc-veo
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
@@ -167,9 +167,9 @@ aggregator_max_latency: 0.1
 stream_aligner_status_period: 0.5
 
 --- name:floor_loop
-config_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/eds_dataset/floor_loop/floor_loop.yaml'
+config_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/eds_dataset/floor_loop/floor_loop.yaml'
 # Remember that this file has to be a symblic link to 03_calib/camchain-mediajaviJAVISdatasetshwdscalibratione2kalibr.yaml in bundles/mc-veo
-calib_file: '/home/hjf/code/MC-VEO/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
+calib_file: '/home/hjf/code/mc-veo/dev/bundles/mc-veo/config/data/dual_setup/camera_info.yaml'
 
 # minimum time, in s, between two sequential samples arrive on events
 events_period: 0.00005 # approx 20KHz
